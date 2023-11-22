@@ -1,11 +1,11 @@
-import useAuthProvider from '@/context/AuthContext';
+import useAuth from '@/context/AuthContext';
 import { FormEvent, useState } from 'react';
 
 export default function Home() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
-	const { signIn, isAuthenticated } = useAuthProvider();
+	const { signIn, isAuthenticated } = useAuth();
 
 	async function handleSubmit(e: FormEvent) {
 		e.preventDefault();
